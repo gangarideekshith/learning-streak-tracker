@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.color-empty {
+  fill: #ebedf0;
+}
+
+.color-filled {
+  fill: #4f46e5;
+}
