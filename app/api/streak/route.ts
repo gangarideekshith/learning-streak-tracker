@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
 import { readData } from "@/lib/dataStore";
 import { calculateStreak } from "@/lib/streakLogic";
+import { getRank } from "@/lib/rankLogic"; // add this import
 
 export async function GET() {
   const data = readData();
 
   const streak = calculateStreak(data.dates);
+
+  const rank = getRank(streak); // add here
 
   const totalDays = data.dates.length;
 
@@ -14,6 +17,7 @@ export async function GET() {
   return NextResponse.json({
     currentStreak: streak,
     totalDays,
-    lastStudied
+    lastStudied,
+    rank // send rank to frontend
   });
 }

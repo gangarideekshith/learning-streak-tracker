@@ -17,7 +17,7 @@ export default function StreakCalendar({ dates }: Props) {
   return (
     <div className="bg-white rounded-xl shadow p-6">
 
-      <h2 className="text-xl font-semibold mb-4">
+      <h2 className="text-xl font-semibold mb-4 text-gray-700">
         Study Activity
       </h2>
 <CalendarHeatmap
